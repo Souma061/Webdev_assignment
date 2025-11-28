@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graduate Registration Form</title>
+  <style>
+    /* CSS will be added here */
+    /* See the CSS section below */
+    /* --- Base Styling for Professional Look --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ebee; /* Light background */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px; /* Max width for large screens */
+}
+
+h2 {
+    color: #00796b; /* Professional accent color */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Fieldset and Legend Styling */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    font-weight: bold;
+    color: #00796b;
+    padding: 0 10px;
+}
+
+/* Form Group Layout (Flexbox for Input Fields) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Styling all main input types */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Crucial for consistent sizing */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #00796b; /* Highlight focus state */
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Allow resizing only vertically */
+}
+
+/* Styling Radio and Checkbox Groups */
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 8px 0;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background-color: #00796b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #004d40;
+}
+
+/* --- Responsive Design (Adaptation) --- */
+/* For screens smaller than 600px (e.g., mobile phones) */
+@media screen and (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        margin: 0 10px; /* Add slight side margin for edges */
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    /* Stack radio/checkbox items vertically on small screens */
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>Non-Employed Graduate Registration</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+
+      <fieldset>
+        <legend>Personal Details</legend>
+        <div class="form-group">
+          <label for="name">Full Name (Text Input)</label>
+          <input type="text" id="name" name="fullname" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email (E-mail Input)</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group radio-group">
+          <label>Gender (Radio Buttons)</label>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City (List/Dropdown)</label>
+          <select id="city" name="city">
+            <option value="none" selected disabled>Select City</option>
+            <option value="kolkata">Kolkata</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="delhi">Delhi</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Educational Details</legend>
+        <div class="form-group">
+          <label for="degree">Highest Degree</label>
+          <input type="text" id="degree" name="degree" required>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>Relevant Skills (Checkboxes)</label>
+          <input type="checkbox" id="coding" name="skill" value="coding">
+          <label for="coding">Coding</label>
+          <input type="checkbox" id="design" name="skill" value="design">
+          <label for="design">Graphic Design</label>
+          <input type="checkbox" id="analytics" name="skill" value="analytics">
+          <label for="analytics">Data Analytics</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Uploads & Achievements</legend>
+        <div class="form-group">
+          <label for="achievements">Key Achievements</label>
+          <textarea id="achievements" name="achievements" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Upload Image (Optional)</label>
+          <input type="file" id="image" name="user_image" >
+        </div>
+      </fieldset>
+
+      <button type="submit" class="submit-btn">Register Information</button>
+
+    </form>
+  </div>
+
+</body>
+
+</html>

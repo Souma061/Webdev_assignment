@@ -5,40 +5,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="index.css">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-columns: 1fr;
+    }
+
+    header {
+      background: linear-gradient(to right, #1b5e20, #388e3c);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #212121;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background: #424242;
+      border-radius: 5px;
+      transition: background 0.3s;
+
+    }
+
+    nav a:hover {
+      background: #616161;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 1.5rem;
+      padding: 2rem;
+      background-color: #f5f5f5;
+    }
+
+    .content {
+      background: white;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      margin-bottom: 1rem;
+      color: #2e7d32;
+    }
+
+    .content p {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+
+    }
+
+    .sidebar {
+      background: #e8f5e9;
+      padding: 1.5rem;
+      border-left: 4px solid #4caf50;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 1rem;
+      color: #2e7d32;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+
+    .sidebar ul li {
+      margin-bottom: 0.75rem;
+    }
+
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #1b5e20;
+    }
+
+    footer {
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <header>Tech Hub</header>
+  <header>EcoTech Insights</header>
   <nav>
     <a href="#">Home</a>
-    <a href="#">AI</a>
-    <a href="#">News</a>
+    <a href="#">Green Tech</a>
+    <a href="#">Sustainability</a>
     <a href="#">Contact</a>
   </nav>
 
   <main class="container">
     <section class="content">
-      <h2>Top Tech Updates in 2025</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero error sunt voluptatibus fugit dolorum similique
-        vitae eligendi provident ex exercitationem?</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero error sunt voluptatibus fugit dolorum similique
-        vitae eligendi provident ex exercitationem?</p>
+      <h2>Sustainable Technology Revolution 2025</h2>
+      <p>Discover how renewable energy and eco-friendly innovations are transforming the tech industry, creating a
+        greener future for generations to come with cutting-edge solutions.</p>
+      <p>From solar-powered devices to biodegradable electronics, the sustainable tech movement is reshaping how we
+        interact with technology while protecting our planet's precious resources.</p>
       <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1000&q=60"
         alt="Tech Future Image">
 
     </section>
     <aside class="sidebar">
-      <h3>Latest Articles</h3>
+      <h3>Featured Topics</h3>
       <ul>
-        <li><a href="https://www.morganstanley.com/insights/articles/ai-trends-reasoning-frontier-models-2025-tmt" target="_blank">AI Innovations in 2025</a></li>
-        <li><a href="https://www.cnbc.com/2025/06/27/quantum-computing-applications-how-it-works.html" target="_blank">The Future of Quantum Computing</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Big_Tech" target="_blank">Tech Giants and Their Latest Gadgets</a></li>
-        <li><a href="https://www.sentinelone.com/cybersecurity-101/cybersecurity/cyber-security-trends/" target="_blank">Cybersecurity Trends to Watch</a></li>
+        <li><a href="https://www.morganstanley.com/insights/articles/ai-trends-reasoning-frontier-models-2025-tmt"
+            target="_blank">Green Energy Solutions</a></li>
+        <li><a href="https://www.cnbc.com/2025/06/27/quantum-computing-applications-how-it-works.html"
+            target="_blank">Eco-Friendly Manufacturing</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Big_Tech" target="_blank">Carbon-Neutral Technologies</a></li>
+        <li><a href="https://www.sentinelone.com/cybersecurity-101/cybersecurity/cyber-security-trends/"
+            target="_blank">Smart Recycling Systems</a></li>
       </ul>
     </aside>
   </main>
-  <footer>&copy; 2025 Tech Hub. All rights reserved.</footer>
+  <footer>&copy; 2025 EcoTech Insights. All rights reserved.</footer>
 
 
 </body>

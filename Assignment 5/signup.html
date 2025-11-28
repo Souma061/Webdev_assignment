@@ -1,11 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign up Page</title>
-  <link rel="stylesheet" href="signup.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&auto=format&fit=crop&q=80") no-repeat center center fixed;
+      background-size: cover;
+      font-family: system-ui, sans-serif;
+    }
+
+    .form-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+      padding: 30px;
+      border-radius: 20px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      text-align: center;
+      color: #9c27b0;
+      margin-bottom: 20px;
+    }
+
+    label {
+      color: rgb(207, 205, 207);
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #9c27b0;
+      padding: 8px;
+      font-size: 14px;
+      color: white;
+      outline: none;
+      margin-bottom: 12px;
+    }
+
+    ::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .radio-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .radio-group label {
+      color: rgb(207, 205, 207);
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    select option {
+      color: black;
+    }
+
+    .checkbox-group {
+      margin: 12px 0;
+      color: rgb(207, 205, 207);
+      font-size: 13px;
+    }
+
+    input[type="submit"] {
+      background: #ff6f00;
+      border-radius: 20px;
+      border: none;
+      height: 40px;
+      font-size: 15px;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background: #9c27b0;
+      transition: 0.3s;
+    }
+
+    .form-links {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .form-links a {
+      color: rgb(207, 205, 207);
+      font-weight: bold;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .form-links a:hover {
+      color: #9c27b0;
+    }
+
+    @media (max-width: 480px) {
+      .form-box {
+        width: 90%;
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      label,
+      input,
+      select {
+        font-size: 0.95rem;
+      }
+
+      .radio-group {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .checkbox-group {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Hide the native radio input */
+    .radio-group input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: transparent;
+      margin: 0;
+      font: inherit;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #9c27b0;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    /* When checked, show a dot */
+    .radio-group input[type="radio"]::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 0.2s transform ease-in-out;
+      background-color: #9c27b0;
+    }
+
+    /* Checked state: show the inner dot */
+    .radio-group input[type="radio"]:checked::before {
+      transform: scale(1);
+    }
+
+    /* Hover effect */
+    .radio-group input[type="radio"]:hover {
+      box-shadow: 0 0 4px #9c27b0;
+    }
+
+    /* Fix label alignment */
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: rgb(207, 205, 207);
+    }
+  </style>
 </head>
+
 <body>
   <div class="form-box">
     <h2>Sign up Here</h2>
@@ -50,4 +234,5 @@
     </form>
   </div>
 </body>
+
 </html>

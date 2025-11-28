@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Web Layout</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation */
+.nav {
+  background: #555;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main layout using Flexbox */
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 25%;
+  background: #e3e3e3;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Main content */
+.content {
+  width: 75%;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>My Website Header</h1>
+  </header>
+
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Links or ads can go here.</p>   
+    </aside>
+
+    <main class="content">
+      <h2>Main Content Area</h2>
+      <p>This is where the main text or data will appear.</p>
+    </main>
+
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 My Website</p>
+  </footer>
+
+</body>
+
+</html>

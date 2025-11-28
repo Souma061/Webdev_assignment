@@ -1,16 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HelloPod - Wireless Earbuds</title>
-  <link rel="stylesheet" href="index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechPulse - Premium Wireless Earbuds</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px 0;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 i {
+      margin-right: 10px;
+      color: #00d4ff;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    header nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: #fff;
+      color: #2575fc;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #e4e4e4;
+    }
+
+    .btn.large {
+      font-size: 18px;
+      padding: 15px 40px;
+    }
+
+    .features {
+      background: #fff;
+      padding: 60px 20px;
+    }
+
+    .features h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+
+    .grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .feature {
+      background: #f1f1f1;
+      padding: 25px;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .feature h4 {
+      margin: 15px 0 10px;
+    }
+
+    .feature i {
+      color: #2575fc;
+    }
+
+    .pricing,
+    .buy {
+      text-align: center;
+      padding: 60px 20px;
+      background: #fdfdfd;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 14px;
+    }
+
+    /* ------------------------- */
+    /* ✅ MOBILE RESPONSIVENESS  */
+    /* ------------------------- */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .btn.large {
+        font-size: 16px;
+        padding: 12px 30px;
+      }
+
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature {
+        width: 100%;
+        max-width: 90%;
+      }
+
+      .pricing p {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .btn.large {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      header nav a {
+        font-size: 14px;
+      }
+
+      .features h3,
+      .pricing h3,
+      .buy h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
   <header>
     <div class="container">
-      <h1><i class="fa-solid fa-headphones"></i> HelloPod</h1>
+      <h1><i class="fa-solid fa-headphones"></i> TechPulse</h1>
       <nav>
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
@@ -21,8 +231,8 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Experience True Freedom</h2>
-      <p>Wireless, Powerful, and Sleek. Your music, redefined.</p>
+      <h2>Pure Sound, Pure Freedom</h2>
+      <p>Experience studio-quality audio with advanced noise cancellation. Elevate your listening.</p>
       <a href="#buy" class="btn">Order Now</a>
     </div>
   </section>
@@ -32,19 +242,19 @@
       <h3><i class="fa-solid fa-star"></i> Features</h3>
       <div class="grid">
         <div class="feature">
-          <i class="fa-solid fa-music fa-2x"></i>
-          <h4>Premium Sound</h4>
-          <p>Enjoy crystal-clear audio with deep bass.</p>
+          <i class="fa-solid fa-volume-up fa-3x"></i>
+          <h4>Active Noise Cancellation</h4>
+          <p>Immerse yourself in crystal-clear sound with intelligent noise cancellation technology.</p>
         </div>
         <div class="feature">
-          <i class="fa-solid fa-volume-xmark fa-2x"></i>
-          <h4>Noise Cancellation</h4>
-          <p>Immerse yourself without distractions.</p>
+          <i class="fa-solid fa-battery-full fa-3x"></i>
+          <h4>Extended Battery Life</h4>
+          <p>Enjoy up to 30 hours of playtime with the charging case for all-day listening.</p>
         </div>
         <div class="feature">
-          <i class="fa-solid fa-battery-full fa-2x"></i>
-          <h4>24-Hour Battery</h4>
-          <p>All-day playtime with fast charging.</p>
+          <i class="fa-solid fa-water fa-3x"></i>
+          <h4>Water Resistant</h4>
+          <p>IPX7 waterproof rating protects against sweat and rain during any activity.</p>
         </div>
       </div>
     </div>
@@ -53,7 +263,7 @@
   <section id="pricing" class="pricing">
     <div class="container">
       <h3><i class="fa-solid fa-tag"></i> Pricing</h3>
-      <p><strong>$129.99</strong> with free worldwide delivery.</p>
+      <p><strong>$179.99</strong> with free shipping and 1-year warranty.</p>
     </div>
   </section>
 
@@ -66,8 +276,9 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 NeoPod. All rights reserved.</p>
+      <p>&copy; 2025 TechPulse. All rights reserved.</p>
     </div>
   </footer>
 </body>
+
 </html>

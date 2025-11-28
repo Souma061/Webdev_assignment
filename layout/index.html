@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout Exam Design</title>
+  <style>
+    /* --- Global Styles & Reset for readability --- */
+* {
+    box-sizing: border-box; /* Recommended: Includes padding and border in width/height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensures the layout uses the full viewport height */
+    display: flex;
+    flex-direction: column; /* Stacks the major sections (header, container, footer) vertically */
+}
+
+/* --- Section Styling --- */
+
+/* (a) Header */
+header {
+    background-color: #00796b; /* Teal color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* (e) Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom if content is short */
+}
+
+/* --- FLEXBOX Layout Definition --- */
+
+/* The main container for the Nav, Main, and Sidebar areas */
+.main-layout-container {
+    display: flex; /* <-- KEY: Activates the Flexbox layout */
+    flex-direction: row; /* Default, but explicit: Arranges children horizontally */
+    flex: 1; /* Allows the container to grow and fill the vertical space between header and footer */
+}
+
+/* (b) Navigation Menu */
+nav {
+    background-color: #4db6ac; /* Lighter Teal */
+    width: 150px; /* Fixed width for the navigation bar */
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    display: block; /* Makes the entire link clickable */
+    padding: 5px 0;
+}
+
+/* (c) Main Content Area */
+main {
+    /* <-- KEY: Makes the main content grow to fill all remaining horizontal space */
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* (d) Sidebar */
+aside {
+    background-color: #c8e6c9; /* Light green/mint */
+    width: 200px; /* Fixed width for the sidebar */
+    padding: 15px;
+    border-left: 1px solid #ccc;
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Website Title</h1>
+  </header>
+
+  <div class="main-layout-container">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Main Article Title</h2>
+      <p>This is the primary content area of the webpage. It is flexible and will take up the most available space. The
+        `main` tag defines the dominant content of the body of the document.</p>
+      <p>We use Flexbox on the `.main-layout-container` to arrange `nav`, `main`, and `aside` horizontally.</p>
+    </main>
+
+    <aside>
+      <h3>Related Links</h3>
+      <ul>
+        <li>Sidebar Item 1</li>
+        <li>Sidebar Item 2</li>
+        <li>Sidebar Item 3</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Layout Design. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

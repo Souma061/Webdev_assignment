@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h2>My Simple Shop</h2>
+    <div id="cart">Cart: <span id="count">0</span></div>
+  </header>
+
+  <div class="shop">
+
+    <div class="item">
+      <h3>Product 1</h3>
+      <p>Rs. 499</p>
+      <button onclick="addToCart()">Add to Cart</button>
+      <button onclick="buy()">Buy Now</button>
+    </div>
+
+    <div class="item">
+      <h3>Product 2</h3>
+      <p>Rs. 799</p>
+      <button onclick="addToCart()">Add to Cart</button>
+      <button onclick="buy()">Buy Now</button>
+    </div>
+
+    <div class="item">
+      <h3>Product 3</h3>
+      <p>Rs. 299</p>
+      <button onclick="addToCart()">Add to Cart</button>
+      <button onclick="buy()">Buy Now</button>
+    </div>
+
+  </div>
+
+  <script>
+    let count = 0;
+
+    function addToCart() {
+      count++;
+      document.getElementById("count").innerText = count;
+      alert("Item added to cart");
+    }
+
+    function buy() {
+      alert("Thank you for buying!");
+    }
+  </script>
+
+</body>
+
+</html>

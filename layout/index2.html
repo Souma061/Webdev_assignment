@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Blog Layout</title>
+  <style>
+    /* CSS is included here for styling and layout */
+    /* See the CSS section below */
+    /* --- Global Reset and Base Styling --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* --- Header and Footer Styling --- */
+header {
+    background-color: #00796b; /* Dark Teal */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #004d40;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* --- Layout: Two-Column Structure (Flexbox) --- */
+.content-wrapper {
+    display: flex; /* <-- KEY: Activates the horizontal layout */
+    padding: 20px;
+    gap: 20px; /* Space between the two columns */
+    min-height: 600px; /* Ensures visual separation */
+    background-color: white;
+}
+
+/* (a) Main Section (Left Column) */
+.main-section {
+    /* Takes up 70% of the available space */
+    flex-basis: 70%;
+    flex-grow: 1; /* Allows it to grow slightly */
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.main-section article {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #eee;
+}
+
+.main-section h2 {
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+.main-section .summary {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* (b) Breaking News Section (Right Column) */
+.breaking-news-section {
+    /* Takes up 30% of the available space */
+    flex-basis: 30%;
+    flex-grow: 1;
+    background-color: #ffe0b2; /* Light Orange/Amber for high visibility */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.breaking-news-section h3 {
+    color: #e65100; /* Darker orange */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Styling for the automatic scrolling box (Marquee) */
+.scroll-box {
+    height: 400px; /* Define the area for scrolling */
+    overflow: hidden; /* Ensures content stays within the box */
+}
+
+.scroll-box p {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ffcc80;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>My Tech News Blog</h1>
+  </header>
+
+  <div class="content-wrapper">
+
+    <main class="main-section">
+      <article>
+        <h2>🚀 Future of AI: Beyond Chatbots</h2>
+        <p class="summary">Artificial intelligence is quickly moving from conversational tools to integrated operational
+          systems. Experts predict that within five years, AI will automate 75% of routine data processing tasks in
+          mid-sized businesses. This shift requires a re-skilling focus for current employees...</p>
+        <p class="details">The descriptive content continues here, providing deep analysis on the economic impact and
+          ethical considerations of widespread AI adoption...</p>
+      </article>
+
+      <article>
+        <h2>💡 Quantum Computing Breakthrough</h2>
+        <p class="summary">Researchers have successfully stabilized a 100-qubit quantum chip for a record 10 minutes.
+          This significantly reduces the error rate and moves us closer to commercially viable quantum systems...</p>
+        <p class="details">More details are provided on the underlying physics and the potential applications in drug
+          discovery and complex financial modeling...</p>
+      </article>
+    </main>
+
+    <aside class="breaking-news-section">
+      <h3>🔥 Breaking News</h3>
+
+      <marquee direction="up" scrollamount="3" class="scroll-box">
+        <p>— New security patch released for major web browsers.</p>
+        <p>— Stocks tumble following Fed rate hike announcement.</p>
+        <p>— Local startup raises $10M for green energy solution.</p>
+        <p>— Global temperature hits new record high this week.</p>
+        <p>— Tech layoffs slow down across the Bay Area.</p>
+      </marquee>
+    </aside>
+
+  </div>
+  <footer>
+    <p>&copy; 2025 News Blog. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

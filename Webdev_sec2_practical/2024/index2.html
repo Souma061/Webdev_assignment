@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 CSS Animation Examples</title>
+  <style>
+    /* --- LAYOUT STYLES --- */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      /* Dark mode for contrast */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Grid to hold 6 cards */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 20px;
+    }
+
+    /* Common Card Shape */
+    .card-wrapper {
+      width: 200px;
+      height: 200px;
+      perspective: 1000px;
+      /* Needed for 3D effects */
+    }
+
+    .base-card {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      /* Keeps content inside rounded corners */
+      transition: all 0.4s ease;
+      /* Default transition */
+    }
+
+    h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    p {
+      margin: 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+
+    /* --- 1. FLOATING (Visible Before & After Hover) --- */
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes float-fast {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-20px) scale(1.1);
+      }
+    }
+
+    .card-1 {
+      background: linear-gradient(135deg, #12c2e9 0%, #c471ed 50%, #f64f59 100%);
+      color: white;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .card-1:hover {
+      animation: float-fast 1s ease-in-out infinite;
+      box-shadow: 0 20px 40px rgba(246, 79, 89, 0.6);
+    }
+
+
+    /* --- 2. PULSE GLOW (Visible Before & After Hover) --- */
+    @keyframes pulse-slow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+        transform: scale(1);
+      }
+
+      50% {
+        box-shadow: 0 0 25px rgba(52, 211, 153, 0.8);
+        transform: scale(1.02);
+      }
+    }
+
+    @keyframes pulse-fast {
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(52, 211, 153, 0.7);
+        transform: scale(1);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(52, 211, 153, 1);
+        transform: scale(1.08);
+      }
+    }
+
+    .card-2 {
+      background: linear-gradient(135deg, #2dd4bf 0%, #10b981 100%);
+      color: white;
+      animation: pulse-slow 2s ease-in-out infinite;
+    }
+
+    .card-2:hover {
+      animation: pulse-fast 0.6s ease-in-out infinite;
+    }
+
+
+    /* --- 3. ROTATE SPIN (Visible Before & After Hover) --- */
+    @keyframes rotate-slow {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotate-fast {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+
+      100% {
+        transform: rotate(360deg) scale(1.15);
+      }
+    }
+
+    .card-3 {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      color: white;
+      animation: rotate-slow 8s linear infinite;
+    }
+
+    .card-3:hover {
+      animation: rotate-fast 2s linear infinite;
+      box-shadow: 0 15px 35px rgba(251, 191, 36, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <div class="card-wrapper">
+      <div class="base-card card-1">
+        <h3>FLOATING</h3>
+        <p>Hover to Speed Up</p>
+      </div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="base-card card-2">
+        <h3>PULSE</h3>
+        <p>Hover to Intensify</p>
+      </div>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="base-card card-3">
+        <h3>ROTATE</h3>
+        <p>Hover to Spin Fast</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

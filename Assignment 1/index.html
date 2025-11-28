@@ -5,15 +5,217 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PERSONAL PORTFOLIO</title>
-  <link rel="stylesheet" href="index.css">
+  <style>
+    /* Reset & Base Styles */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0 0 15px 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    header h2 {
+      font-size: 1.8em;
+      margin: 10px 0;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    header h3 {
+      font-size: 1.2em;
+      margin: 10px 0;
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-direction: row;
+    }
+
+    nav ul li {
+      margin: 0;
+      text-align: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2a5298;
+      font-weight: 600;
+      padding: 20px 30px;
+      display: block;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    nav ul li a:hover {
+      background-color: #667eea;
+      color: white;
+      border-bottom: 3px solid #764ba2;
+    }
+
+    /* Section Styles */
+    section {
+      margin: 30px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 900px;
+    }
+
+    section h2 {
+      color: #1e3c72;
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-left: 5px solid #667eea;
+      padding-left: 15px;
+    }
+
+    section p {
+      color: #555;
+      font-size: 1.1em;
+    }
+
+    /* Project Cards */
+    .project {
+      max-width: 100%;
+      margin: 20px 0;
+      padding: 25px;
+      border: none;
+      border-left: 4px solid #667eea;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+    .project:hover {
+      transform: translateX(10px);
+      box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+      border-left-width: 8px;
+    }
+
+    .project h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.4em;
+      color: #1e3c72;
+    }
+
+    .project p {
+      margin: 5px 0;
+      color: #444;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: auto;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1em;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      body {
+        font-size: 15px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      header h2,
+      header h3 {
+        font-size: 1.1em;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 8px 0;
+      }
+
+      section {
+        margin: 10px;
+        padding: 10px;
+        width: 95%;
+      }
+
+      .project {
+        padding: 8px;
+      }
+
+      .project h3 {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <main>
     <header>
       <h1>Welcome to my Personal Portfolio</h1>
-      <h2>Soumabrata Ghosh</h2>
-      <h3>Full Stack  Developer</h3>
+      <h2>Soumik Dey</h2>
+      <h3>Developer</h3>
     </header>
 
     <nav>
@@ -27,46 +229,40 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am a passionate web developer with a keen interest in creating dynamic and responsive web applications. I have
-        experience in HTML, CSS, JavaScript, and various frameworks. My goal is to build user-friendly websites that
-        provide an excellent user experience.
-        I enjoy learning new technologies and keeping up with the latest trends in web development. In my free time, I
-        like to work on personal projects, contribute to open-source, and explore new programming languages.
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus eligendi reprehenderit quas facilis quo nostrum deserunt quae porro illo quod dolor, itaque quos neque voluptatibus pariatur, dolorum doloribus. Iure doloribus enim sapiente dolor reiciendis dicta obcaecati distinctio nam beatae, ex, itaque voluptate qui consequatur tenetur ipsam, vitae voluptas cumque. Ipsum.
       </p>
     </section>
     <section id="projects">
       <h2>Projects</h2>
+
       <div class="project">
-        <h3>PROJECT 1: PostMee</h3>
+        <h3>PROJECT 1: E-Commerce Dashboard</h3>
         <p>
-          A web-based <b>Bloggibg System </b> that allows users to create, edit, and delete blog posts. Built using HTML, CSS,
-          and JavaScript and ReactJS and Appwrite for backend services.
+     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat unde eaque earum reprehenderit laudantium officia error molestias aperiam saepe possimus?
         </p>
       </div>
       <div class="project">
-        <h3>PROJECT 2: Quiz Game</h3>
+        <h3>PROJECT 2: Weather Forecast App</h3>
         <p>
-          A simple web-based <b>Quiz Game</b> game where users can answer multiple-choice questions and get scored based on their
-          answers. Built using HTML, CSS, and JavaScript.
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, rem assumenda quam earum voluptatum culpa deserunt laboriosam neque nostrum ipsa!
         </p>
       </div>
     </section>
     <section id="contact">
       <h2>Contact Me</h2>
       <p>
-        If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, repellendus?
         <br>
-        Email: soumabrataghosh57@gmail.com
+        Email: soumikdey123@gmail.com
         <br>
-        Phone: +91 4528527894
+        Phone: +91 1234567890
       </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Soumabrata Ghosh | All rights reserved</p>
+    <p>&copy; Soumik Dey | All rights reserved</p>
   </footer>
 </body>
-
 
 </html>

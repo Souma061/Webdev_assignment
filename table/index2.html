@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seminar Schedule Table</title>
+  <style>
+    /* CSS Styling is included here for simplicity */
+    .schedule-table {
+      border-collapse: collapse;
+      /* Essential for a neat table look */
+      width: 700px;
+      font-family: Arial, sans-serif;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+      /* Added line-height for better readability in multi-line cells */
+      line-height: 1.4;
+    }
+
+    /* Styling for the header rows (as per the image's shading) */
+    .schedule-table thead th,
+    .schedule-table tbody tr:first-child th {
+      background-color: #d3d3d3;
+      /* Light gray to simulate shading */
+      font-weight: bold;
+    }
+
+    /* Specific styling for the Day column header and cells (which have shading) */
+    .schedule-table thead th:first-child,
+    .schedule-table tbody th {
+      background-color: #d3d3d3;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th rowspan="2">Day</th>
+
+        <th colspan="2">Schedule</th>
+        <th rowspan="2">Seminar</th>
+
+      </tr>
+      <tr>
+        <th>Begin</th>
+        <th>End</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <th rowspan="2">Monday</th>
+        <td>8:00am</td>
+        <td>5:00pm</td>
+        <td>IoT</td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td>Transforming healthcare with IoMT</td>
+      </tr>
+
+      <tr>
+        <th rowspan="3">Tuesday</th>
+        <td>8:00am</td>
+        <td>1:00pm</td>
+        <td>Fundamental of AI and its applications</td>
+      </tr>
+      <tr>
+        <td>2:00pm</td>
+        <td>5:00pm</td>
+        <td>Cloud Computing</td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <th>Wednesday</th>
+        <td>8:00am</td>
+        <td>12:00pm</td>
+        <td>Reinforcement Learning</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</body>
+
+</html>
